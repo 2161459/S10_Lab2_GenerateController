@@ -1,0 +1,39 @@
+﻿@model RestaurantsStatsVM
+
+<h2>Statistiques des restaurants</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Restaurant</th>
+            <th>Nb commandes</th>
+            <th>Nb plats vendus</th>
+            <th>Prix total</th>
+            <th>Prix max commande</th>
+            <th>Niveau piquant max</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var restaurant in Model.RestaurantStatsVM)
+        {
+            <tr>
+                <td>@restaurant.Nom</td>
+                <td>@restaurant.NbCommandes</td>
+                <td>@restaurant.NbPlatsVendus</td>
+                <td>@restaurant.PrixTotalCommandes.ToString("C")</td>
+                <td>@restaurant.PrixMaxCommande.ToString("C")</td>
+                <td>@restaurant.MaxNiveauPiquant</td>
+            </tr>
+        }
+
+        <tr class="table-dark">
+            <td><strong>TOTAL</strong></td>
+            <td>@Model.NbCommandes</td>
+            <td>@Model.NbPlatsVendus</td>
+            <td>@Model.PrixTotalCommandes.ToString("C")</td>
+            <td>@Model.PrixMaxCommande.ToString("C")</td>
+            <td>@Model.MaxNiveauPiquant</td>
+        </tr>
+    </tbody>
+</table>
