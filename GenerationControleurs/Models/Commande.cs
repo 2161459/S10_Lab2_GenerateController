@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;  //si creation de resto ne fonctionne pas ajouter
 
 namespace LinqEtSeedEF.Models
 {
@@ -10,6 +10,7 @@ namespace LinqEtSeedEF.Models
         public Client Client { get; set; }
         public int RestaurantId { get; set; }
         public Restaurant Restaurant { get; set; }
+        //[ValidateNever]  si creation de resto ne fonctionne pas ajouter
         public List<CommandePlat> CommandesPlats { get; set; }
     }
 }
