@@ -1,4 +1,6 @@
-﻿namespace LinqEtSeedEF.Models
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+
+namespace LinqEtSeedEF.Models
 {
     public class Restaurant
     {

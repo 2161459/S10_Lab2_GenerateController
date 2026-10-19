@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 namespace LinqEtSeedEF.Models
 {
     public class CommandePlat

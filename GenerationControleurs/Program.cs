@@ -1,4 +1,8 @@
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("GenerationControleursContext") ?? throw new InvalidOperationException("Connection string 'GenerationControleursContext' not found.");
+
+builder.Services.AddDbContext<GenerationControleursContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
